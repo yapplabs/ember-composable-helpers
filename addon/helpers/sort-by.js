@@ -25,7 +25,7 @@ class SortBy {
   constructor(...args) {
     let [array] = args;
 
-    this.array = [...array];
+    this.array = array.toArray ? array.toArray : [...array];
     this.callbacks = null;
   }
 
